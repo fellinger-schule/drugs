@@ -1,0 +1,30 @@
+﻿<Window x:Class="QTDrugPrescription.WpfApp.AddPatientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QTDrugPrescription.WpfApp"
+        mc:Ignorable="d"
+        Title="AddPatientWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="SSN"/>
+                <TextBox Width="300" Text="{Binding SocialSecurityNumber}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="First Name"/>
+                <TextBox Width="300" Text="{Binding FirstName}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Last Name"/>
+                <TextBox Width="300" Text="{Binding LastName}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Birthdate"/>
+                <DatePicker SelectedDate="{Binding Birthday}"/>
+            </StackPanel>
+            <Button Content="Add Patient" Margin="0,20,0,0" Command="{Binding AddCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>
